@@ -1,0 +1,16 @@
+# This file contains all the conan packages which are common to all the variants of this environment.
+# Most of the available conan packages can be found at:
+# https://artifactory.geo.conti.de/artifactory/i_id_gen_dev1_tools_conan_snapshots_l/conti_gen_dev1/
+# -------------------------------------------------------------------------------------------------
+include(default)
+
+[build_requires]
+# TODO: select the version of ACG you want to use
+tresos_acg/8.8.1-fix0@conti_gen_dev1/testing
+# TODO: select the version of Config Tool you want to use (if you don't know use the latest)
+configtool/6.6.d-int1@conti_gen_dev1/testing
+# TODO: for TV2 environments, select the version of the OS you want to use
+etas_rta_os/6.2.0@conti_gen_dev1/testing
+etas_rta_os_tv2ghs/5.00.3@conti_gen_dev1/testing
+# TODO: select the version of compiler you want to use
+ghs-multi-arm/2017.1.4_7.1.4-p171027@conti_gen_dev1/testing
