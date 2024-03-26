@@ -1,0 +1,19 @@
+version: 2.0
+
+binary:
+- name: test_fbl_rtu_2m_revc_updater
+  type: local
+  reference: out/bs_fbl_rtu_2m_revc/bin/bs_fbl_rtu_2m_revc_updater_full_utip.s19
+
+binary_set:
+- name: binary_set_fbl_2m_revc_updater
+  binary:
+  - test_fbl_rtu_2m_revc_updater
+  board: tv2_2m
+
+test_campaign:
+# - name: test_updater
+  # binary_set: binary_set_fbl_2m_revc_updater
+  # test_suite:
+    # - tst/update_rtu.rtu
+  # module: fbl_rtu_2m_revc
