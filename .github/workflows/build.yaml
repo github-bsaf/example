@@ -3,8 +3,8 @@ on: push
 env:
   JENKINS_HOST: https://jenkins-gldtn-tv2-sdk.cmo.conti.de/
   JENKINS_JOB: job/pipetest
-  JENKINS_USER: uig45131
-  JENKINS_TOKEN: '11d159eda41f6ec09a9b29a66aa44b9d7e'
+  JENKINS_USER: uif91573
+  JENKINS_TOKEN: 11644fa659f5d2497d502097e4f8becd19
 
 jobs:
   launch_jenkins_job:
@@ -13,9 +13,9 @@ jobs:
     steps:
       -
         name: Trigger Jenkins Job
-        uses: toptal/jenkins-job-trigger-action@master
+        uses: sbitio/trigger-jenkins-job@master
         with:
-          jenkins_user: ${{ env.JENKINS_USER }}
-          jenkins_token: ${{ env.JENKINS_TOKEN }}
-          jenkins_url: ${{ env.JENKINS_HOST }}
-          job_name: "pipetest"
+          JENKINS_USER: ${{ env.JENKINS_USER }}
+          JENKINS_TOKEN: ${{ env.JENKINS_TOKEN }}
+          JENKINS_HOST: ${{ env.JENKINS_HOST }}
+          JENKINS_JOB: ${{ env.JENKINS_JOB }}
