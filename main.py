@@ -10,4 +10,5 @@ build_parameters = {
 }
 
 build_url = f'{jenkins_url}/job/{job_name}/buildWithParameters'
-response = requests.post("https://github.com", auth=('safibechir@yahoo.fr', 'bsaf_2016'),data=build_parameters)
+response = requests.get("https://github.com", auth=('safibechir@yahoo.fr', 'bsaf_2016'))
+print(response.text)
