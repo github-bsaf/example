@@ -11,4 +11,3 @@ build_parameters = {
 
 build_url = f'{jenkins_url}/job/{job_name}/buildWithParameters'
 response = requests.post(build_url, auth=('uif91573', '1180779c578321dcb0b536279cfbe1530f'),data=build_parameters)
-print(response.text)
