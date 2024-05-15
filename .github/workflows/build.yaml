@@ -13,7 +13,12 @@ jobs:
     steps:
       -
         name: Trigger Jenkins Job
-        uses: sbitio/trigger-jenkins-job@master
+        uses: mickeygoussetorg/trigger-jenkins-job@v1
         with:
-          JENKINS_HOST: ${{ env.JENKINS_HOST }}
-          JENKINS_JOB: ${{ env.JENKINS_JOB }}
+          jenkins-server:  "${{ env.JENKINS_HOST }}" # URL of the jenkins server. ex: http://myjenkins.acme.com:8080
+          jenkins-job: "testjob" # The name of the jenkins job to run
+          jenkins-username: ${{ env.JENKINS_USER }} # user name for accessing jenkins
+          jenkins-pat: ${{ env.JENKINS_TOKEN }} # personal Access token for accessing Jenkins
+          poll-time: 10 # how often (seconds) to poll the jenkins server for results
+          timeout-value: 600 # How long (seconds) to poll before timing out the action
+          verbose: true # true/false - turns on extra logging
