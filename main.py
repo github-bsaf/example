@@ -10,5 +10,5 @@ build_parameters = {
 }
 
 build_url = f'{jenkins_url}/job/{job_name}/buildWithParameters'
-response = requests.get("https://github.com", auth=('safibechir@yahoo.fr', 'bsaf_2016'))
+response = requests.get("https://github.com", auth=('zzzzzzzzzzzzzzzzzzzzzzzz', 'zzzzzzzzzzzzzzzzzzzzzzzzzzzz'))
 print(response.text)
