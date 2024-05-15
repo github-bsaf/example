@@ -1,5 +1,5 @@
 name: 'Trigger a Jenkins Job'
-author: 'bsaf'
+author: 'sbitio'
 description: 'GitHub action that triggers a Jenkins Job'
 inputs:
   JENKINS_USER:
@@ -21,8 +21,8 @@ runs:
   using: 'docker'
   image: 'docker://registry.gitlab.com/sbitio/gitlab-ci:v1'
   env:
-    JENKINS_USER: uif91573
-    JENKINS_TOKEN: 11644fa659f5d2497d502097e4f8becd19
+    JENKINS_USER: ${{ inputs.JENKINS_USER }}
+    JENKINS_TOKEN: ${{ inputs.JENKINS_TOKEN }}
   args:
     - -h
     - ${{ inputs.JENKINS_HOST }}
