@@ -1,0 +1,36 @@
+name: 'Trigger a Jenkins Job'
+author: 'bsaf'
+description: 'GitHub action that triggers a Jenkins Job'
+inputs:
+  JENKINS_USER:
+    description: 'Jenkins user that will trigger the job'
+    required: true
+  JENKINS_TOKEN:
+    description: 'Jenkins token used for verification'
+    required: true
+  JENKINS_HOST:
+    description: 'Jenkins host where the jobs will be run'
+    required: true
+  JENKINS_JOB:
+    description: 'Jenkins job to be built'
+    required: true
+  JENKINS_PARAMS:
+    description: 'Jenkins job parameters'
+
+runs:
+  using: 'docker'
+  image: 'docker://registry.gitlab.com/sbitio/gitlab-ci:v1'
+  env:
+    JENKINS_USER: uif91573
+    JENKINS_TOKEN: 11644fa659f5d2497d502097e4f8becd19
+  args:
+    - -h
+    - ${{ inputs.JENKINS_HOST }}
+    - -j
+    - ${{ inputs.JENKINS_JOB }}
+    - -p
+    - ${{ inputs.JENKINS_PARAMS }}
+
+branding:
+  icon: 'sun'
+  color: 'white'
