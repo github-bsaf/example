@@ -1,7 +1,7 @@
 on: push
 
 env:
-  JENKINS_HOST: https://jenkins-gldtn-tv2-sdk.cmo.conti.de/
+  JENKINS_HOST: https://jenkins-gldtn-tv2-sdk.cmo.conti.de
   JENKINS_JOB: job/pipetest
   JENKINS_USER: uif91573
   JENKINS_TOKEN: 11644fa659f5d2497d502097e4f8becd19
