@@ -2,7 +2,7 @@ on: push
 
 env:
   JENKINS_HOST: https://jenkins-gldtn-tv2-sdk.cmo.conti.de
-  JENKINS_JOB: job/pipeline_fbl
+  JENKINS_JOB: job/pipetest
   JENKINS_USER: uig45131
   JENKINS_TOKEN: 11d159eda41f6ec09a9b29a66aa44b9d7e
 
