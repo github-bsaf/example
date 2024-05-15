@@ -1,0 +1,9 @@
+branches:
+  - target: master
+    jobs:
+      - job:
+          url: https://jenkins-gldtn-tv2-sdk.cmo.conti.de/job/pipeline_fbl/
+        triggers:
+          - pull_request:
+              labels:
+                - check
