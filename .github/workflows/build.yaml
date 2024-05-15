@@ -1,9 +1,10 @@
 on: push
 
 env:
-  JENKINS_HOST: https://jenkins-gldtn-tv2-sdk.cmo.conti.de## jenkins base url
-  JENKINS_JOB: job/pipeline_fbl ## builds the HelloWorld job inside testJobs
-
+  JENKINS_HOST: https://jenkins-gldtn-tv2-sdk.cmo.conti.de
+  JENKINS_JOB: job/pipeline_fbl
+  JENKINS_USER: uig45131
+  JENKINS_TOKEN: scascacazzdad
 
 jobs:
   launch_jenkins_job:
@@ -14,7 +15,7 @@ jobs:
         name: Trigger Jenkins Job
         uses: sbitio/trigger-jenkins-job@master
         with:
-          JENKINS_USER: ${{ secrets.JENKINS_USER }}
-          JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}
+          JENKINS_USER: ${{ env.JENKINS_USER }}
+          JENKINS_TOKEN: ${{ env.JENKINS_TOKEN }}
           JENKINS_HOST: ${{ env.JENKINS_HOST }}
           JENKINS_JOB: ${{ env.JENKINS_JOB }}
