@@ -13,7 +13,7 @@ jobs:
     steps:
       -
         name: Trigger Jenkins Job
-        uses: sbitio/trigger-jenkins-job@master
+        uses: toptal/jenkins-job-trigger-action@master
         with:
           JENKINS_USER: ${{ env.JENKINS_USER }}
           JENKINS_TOKEN: ${{ env.JENKINS_TOKEN }}
